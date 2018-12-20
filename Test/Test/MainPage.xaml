@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="Test.MainPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:Lib="clr-namespace:HaFT.Xamarin.Forms.Lib;assembly=HaFT.Xamarin.Forms.Lib">
+
+	<Grid x:Name="G">
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+
+		<Lib:Label Grid.Row="1" Text="Snap!" FontSize="32" BorderColor="DarkRed" BorderWidth="3" BackgroundColor="DarkSeaGreen" VerticalTextAlignment="End" HorizontalTextAlignment="Start" />
+
+		<Lib:Border Grid.Row="2" BorderColor="DarkRed" BorderWidth="3" BackgroundColor="DarkSeaGreen">
+			<Lib:Border.BorderContent>
+				<Label x:Name="lbl" Text="This is a test" />
+			</Lib:Border.BorderContent>
+		</Lib:Border>
+
+		<Lib:Button Grid.Row="3" Text="Click, Me!!!" BorderWidth="10" BorderColor="Violet" BackgroundColor="DarkTurquoise" TextColor="Chocolate" FontSize="24" Clicked="Button_OnClicked" />
+	</Grid>
+
+</ContentPage>
