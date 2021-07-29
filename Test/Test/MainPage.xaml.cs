@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using HaFT.Xamarin.Forms.Lib;
+using HaFT.Xamarin.Forms.Lib.Ext;
 
 using Button = HaFT.Xamarin.Forms.Lib.Button;
 
@@ -30,11 +31,11 @@ namespace Test
 			B.Text += "@";
 		}
 
-		private void RoundedButton_OnTapped(object sender, EventArgs e)
+		private async void RoundedButton_OnTapped(object sender, EventArgs e)
 		{
-			var b = (RoundedButton)sender;
-			b.Text += "!";
-			DisplayAlert("", b.Text, "OK");
+			var b = await this.ShowYesNoPrompt("Please answer");
+
+			await this.ShowMessage(b.ToString());
 		}
 	}
 }

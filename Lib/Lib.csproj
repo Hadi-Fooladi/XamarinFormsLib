@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>HaFT.Xamarin.Forms.Lib</RootNamespace>
     <AssemblyName>HaFT.Xamarin.Forms.Lib</AssemblyName>
-    <Version>1.1.3</Version>
+    <Version>1.2.4</Version>
     <Authors>Hadi Fooladi Talari</Authors>
     <Company>HaFT</Company>
     <PackageTags>Xamarin Forms Useful Library HaFT</PackageTags>
