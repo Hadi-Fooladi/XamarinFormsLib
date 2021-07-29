@@ -7,7 +7,7 @@
 
 	<Grid x:Name="gOuter">
 		<Grid x:Name="gInner">
-			<ContentPresenter Content="{Binding BorderContent,Source={x:Reference B}}" />
+			<ContentView Content="{Binding BorderContent,Source={x:Reference B}}" />
 		</Grid>
 	</Grid>
 </ContentView>
