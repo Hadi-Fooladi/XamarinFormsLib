@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
+using HaFT.Xamarin.Forms.Lib;
 
 using Button = HaFT.Xamarin.Forms.Lib.Button;
 
@@ -26,6 +28,13 @@ namespace Test
 		{
 			DisplayAlert("", B.Text, "OK");
 			B.Text += "@";
+		}
+
+		private void RoundedButton_OnTapped(object sender, EventArgs e)
+		{
+			var b = (RoundedButton)sender;
+			b.Text += "!";
+			DisplayAlert("", b.Text, "OK");
 		}
 	}
 }

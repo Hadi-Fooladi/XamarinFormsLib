@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+	x:Class="HaFT.Xamarin.Forms.Lib.RoundedButton"
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:Shapes="clr-namespace:Xamarin.Forms.Shapes;assembly=Xamarin.Forms.Core">
+	<Grid>
+		<Shapes:Rectangle
+			x:Name="R"
+			VerticalOptions="FillAndExpand"
+			HorizontalOptions="FillAndExpand" />
+
+		<Label
+			x:Name="L"
+			VerticalOptions="Center"
+			HorizontalOptions="Center" />
+	</Grid>
+</ContentView>

@@ -11,6 +11,7 @@
 			<RowDefinition />
 			<RowDefinition />
 			<RowDefinition />
+			<RowDefinition />
 		</Grid.RowDefinitions>
 
 		<Lib:Label Grid.Row="1" Text="Snap!" FontSize="32" BorderColor="DarkRed" BorderWidth="3" BackgroundColor="DarkSeaGreen" VerticalTextAlignment="End" HorizontalTextAlignment="Start" />
@@ -22,6 +23,8 @@
 		</Lib:Border>
 
 		<Lib:Button Grid.Row="3" Text="Click, Me!!!" BorderWidth="10" BorderColor="Violet" BackgroundColor="DarkTurquoise" TextColor="Chocolate" FontSize="24" Clicked="Button_OnClicked" />
+
+		<Lib:RoundedButton Grid.Row="4" Text="Rounded Button" Tapped="RoundedButton_OnTapped" />
 	</Grid>
 
 </ContentPage>
