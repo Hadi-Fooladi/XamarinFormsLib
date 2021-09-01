@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+	x:Class="HaFT.Xamarin.Forms.Lib.Resources"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:HaFT.Xamarin.Forms.Lib;assembly=HaFT.Xamarin.Forms.Lib">
+
+	<Style TargetType="local:Border">
+		<Setter Property="ControlTemplate">
+			<Setter.Value>
+				<ControlTemplate>
+					<Grid
+						Padding="{TemplateBinding BorderWidth}"
+						BackgroundColor="{TemplateBinding BorderColor}">
+						<Grid BackgroundColor="{TemplateBinding BackgroundColor}">
+							<ContentPresenter />
+						</Grid>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

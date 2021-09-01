@@ -16,10 +16,11 @@
 
 		<Lib:Label Grid.Row="1" Text="Snap!" FontSize="32" BorderColor="DarkRed" BorderWidth="3" BackgroundColor="DarkSeaGreen" VerticalTextAlignment="End" HorizontalTextAlignment="Start" />
 
-		<Lib:Border Grid.Row="2" BorderColor="DarkRed" BorderWidth="3" BackgroundColor="DarkSeaGreen">
-			<Lib:Border.BorderContent>
+		<Lib:Border Grid.Row="2" BorderColor="DarkRed" BorderWidth="7" BackgroundColor="DarkSeaGreen">
+			<StackLayout>
 				<Label x:Name="lbl" Text="This is a test" />
-			</Lib:Border.BorderContent>
+				<Button Text="Click Me!!!" />
+			</StackLayout>
 		</Lib:Border>
 
 		<Lib:Button Grid.Row="3" Text="Click, Me!!!" BorderWidth="10" BorderColor="Violet" BackgroundColor="DarkTurquoise" TextColor="Chocolate" FontSize="24" Clicked="Button_OnClicked" />
