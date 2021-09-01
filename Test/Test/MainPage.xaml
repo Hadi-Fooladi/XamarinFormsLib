@@ -16,8 +16,8 @@
 
 		<Lib:Label Grid.Row="1" Text="Snap!" FontSize="32" BorderColor="DarkRed" BorderWidth="3" BackgroundColor="DarkSeaGreen" VerticalTextAlignment="End" HorizontalTextAlignment="Start" />
 
-		<Lib:Border Grid.Row="2" BorderColor="DarkRed" BorderWidth="7" BackgroundColor="DarkSeaGreen">
-			<StackLayout>
+		<Lib:Border Grid.Row="2" BorderColor="DarkRed" BorderWidth="7" BackgroundColor="DarkSeaGreen" BorderRadius="20" FillColor="Bisque">
+			<StackLayout Margin="20">
 				<Label x:Name="lbl" Text="This is a test" />
 				<Button Text="Click Me!!!" />
 			</StackLayout>

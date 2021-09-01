@@ -3,18 +3,31 @@
 	x:Class="HaFT.Xamarin.Forms.Lib.Resources"
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:local="clr-namespace:HaFT.Xamarin.Forms.Lib;assembly=HaFT.Xamarin.Forms.Lib">
+	xmlns:local="clr-namespace:HaFT.Xamarin.Forms.Lib;assembly=HaFT.Xamarin.Forms.Lib"
+	xmlns:shapes="clr-namespace:Xamarin.Forms.Shapes;assembly=Xamarin.Forms.Core">
 
 	<Style TargetType="local:Border">
 		<Setter Property="ControlTemplate">
 			<Setter.Value>
 				<ControlTemplate>
-					<Grid
-						Padding="{TemplateBinding BorderWidth}"
-						BackgroundColor="{TemplateBinding BorderColor}">
-						<Grid BackgroundColor="{TemplateBinding BackgroundColor}">
-							<ContentPresenter />
-						</Grid>
+					<Grid>
+						<shapes:Rectangle
+							VerticalOptions="FillAndExpand"
+							HorizontalOptions="FillAndExpand"
+							RadiusX="{TemplateBinding BorderRadius}"
+							RadiusY="{TemplateBinding BorderRadius}"
+							StrokeThickness="{TemplateBinding BorderWidth}">
+
+							<shapes:Rectangle.Fill>
+								<SolidColorBrush Color="{TemplateBinding FillColor}" />
+							</shapes:Rectangle.Fill>
+
+							<shapes:Rectangle.Stroke>
+								<SolidColorBrush Color="{TemplateBinding BorderColor}" />
+							</shapes:Rectangle.Stroke>
+						</shapes:Rectangle>
+
+						<ContentPresenter />
 					</Grid>
 				</ControlTemplate>
 			</Setter.Value>
