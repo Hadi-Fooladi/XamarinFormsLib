@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+	x:Class="HaFT.Xamarin.Forms.CrossView"
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:shapes="clr-namespace:Xamarin.Forms.Shapes;assembly=Xamarin.Forms.Core">
+
+	<Grid>
+		<shapes:Line x:Name="_line1" X1="0" Y1="0" StrokeThickness="4" Stroke="DarkRed" IsEnabled="False" />
+		<shapes:Line x:Name="_line2" X1="0" Y2="0" StrokeThickness="4" Stroke="DarkRed" IsEnabled="False" />
+	</Grid>
+
+	<ContentView.GestureRecognizers>
+		<TapGestureRecognizer Tapped="OnTapped" />
+	</ContentView.GestureRecognizers>
+</ContentView>

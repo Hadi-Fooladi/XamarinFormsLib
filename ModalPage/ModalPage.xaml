@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="HaFT.Xamarin.Forms.ModalPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:shapes="clr-namespace:Xamarin.Forms.Shapes;assembly=Xamarin.Forms.Core"
+	xmlns:local="clr-namespace:HaFT.Xamarin.Forms;assembly=HaFT.Xamarin.Forms.ModalPage"
+	Padding="10,20"
+	BackgroundColor="#4000">
+
+	<Grid>
+		<shapes:Rectangle x:Name="_rect" Stroke="Black" StrokeThickness="3" Fill="White" />
+
+		<Grid Grid.Row="0" RowDefinitions="Auto,*" RowSpacing="0">
+			<StackLayout x:Name="_headerLayout" Grid.Row="0" Margin="20,10,20,0" IsVisible="False">
+				<Grid ColumnDefinitions="Auto,*,20">
+					<Image x:Name="_headerImage" HeightRequest="32" VerticalOptions="Center" IsVisible="False" />
+
+					<Label Grid.Column="1" x:Name="_headerLabel" FontSize="32" Text="Sample" FontAttributes="Bold" />
+
+					<local:CrossView Grid.Column="2" VerticalOptions="Center" Tapped="Cross_OnTapped" />
+				</Grid>
+
+				<BoxView Color="Black" HeightRequest="2" />
+			</StackLayout>
+
+			<ContentView Grid.Row="1" x:Name="_cv" Margin="8" />
+		</Grid>
+	</Grid>
+</ContentPage>

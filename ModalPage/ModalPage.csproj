@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Version>1.0.1.1</Version>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<RootNamespace>HaFT.Xamarin.Forms</RootNamespace>
+		<AssemblyName>HaFT.Xamarin.Forms.ModalPage</AssemblyName>
+		<Authors>Hadi Fooladi Talari</Authors>
+		<PackageId>HaFT.Xamarin.Forms.ModalPage</PackageId>
+		<Company>HaFT</Company>
+		<Product>HaFT.Xamarin.Forms.ModalPage</Product>
+		<PackageTags>HaFT Xamarin Forms Modal Page View</PackageTags>
+		<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
+	</ItemGroup>
+
+</Project>
