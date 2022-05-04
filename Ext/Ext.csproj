@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Version>1.0.1</Version>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<AssemblyName>HaFT.Xamarin.Forms.Ext</AssemblyName>
+		<RootNamespace>HaFT.Xamarin.Forms.Ext</RootNamespace>
+		<Authors>Hadi Fooladi Talari</Authors>
+		<Company>HaFT</Company>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
+	</ItemGroup>
+
+</Project>
