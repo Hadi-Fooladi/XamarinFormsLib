@@ -37,8 +37,10 @@ namespace HaFT.Xamarin.Forms
 			return true;
 		}
 
+		#region Fields
 		private readonly IModalView _view;
 		private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(0);
+		#endregion
 
 		#region Properties
 		public Color BorderColor
@@ -85,6 +87,7 @@ namespace HaFT.Xamarin.Forms
 		}
 		#endregion
 
+		#region Public Methods
 		/// <summary>
 		/// Should be called once
 		/// </summary>
@@ -112,7 +115,52 @@ namespace HaFT.Xamarin.Forms
 			await nav.PopModalAsync(showAnimation);
 		}
 
+		public void SetAbsoluteWidth(double value) { SetHorzLayout(new GridLength(value), GridLength.Star); }
+		public void SetAbsoluteHeight(double value) { SetVertLayout(new GridLength(value), GridLength.Star); }
+
+		public void SetRelativeWidth(double percentage) { SetRelativeSize(percentage, SetHorzLayout); }
+		public void SetRelativeHeight(double percentage) { SetRelativeSize(percentage, SetVertLayout); }
+
+		public void SetAutoWidth() { SetHorzLayout(GridLength.Auto, GridLength.Star); }
+		public void SetAutoHeight() { SetVertLayout(GridLength.Auto, GridLength.Star); }
+		#endregion
+
 		private void Close() { _semaphore.Release(); }
+
+		private void SetHorzLayout(GridLength main, GridLength margin)
+		{
+			_grid.ColumnDefinitions = new ColumnDefinitionCollection
+			{
+				convert(margin),
+				convert(main),
+				convert(margin)
+			};
+
+			ColumnDefinition convert(GridLength length) => new ColumnDefinition { Width = length };
+		}
+
+		private void SetVertLayout(GridLength main, GridLength margin)
+		{
+			_grid.RowDefinitions = new RowDefinitionCollection
+			{
+				convert(margin),
+				convert(main),
+				convert(margin)
+			};
+
+			RowDefinition convert(GridLength length) => new RowDefinition { Height = length };
+		}
+
+		public void SetRelativeSize(double percentage, Action<GridLength, GridLength> layoutAction)
+		{
+			if (percentage < 0 || percentage > 100)
+				throw new ArgumentException("invalid percentage", nameof(percentage));
+
+			var reminder = 100 - percentage;
+			var blank = reminder / 2;
+
+			layoutAction(new GridLength(percentage, GridUnitType.Star), new GridLength(blank, GridUnitType.Star));
+		}
 
 		#region Event Handlers
 		private void Cross_OnTapped(object sender, EventArgs e) { _view.Close(); }

@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Version>1.0.1.1</Version>
+		<Version>1.1.2.0</Version>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<RootNamespace>HaFT.Xamarin.Forms</RootNamespace>
 		<AssemblyName>HaFT.Xamarin.Forms.ModalPage</AssemblyName>
@@ -14,6 +14,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="HaFT.Xamarin.Forms.Ext" Version="1.0.1" />
 		<PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
 	</ItemGroup>
 
