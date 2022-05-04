@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Version>1.0.1</Version>
+		<Version>1.1.2</Version>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
 		<Authors>Hadi Fooladi Talari</Authors>
@@ -15,8 +15,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="HaFT.Xamarin.Forms.ModalPage" Version="1.0.1.1" />
+		<PackageReference Include="HaFT.Xamarin.Forms.ModalPage" Version="1.1.2" />
 		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
 		<PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+
+		<!--<ProjectReference Include="..\..\..\..\ModalPage\ModalPage.csproj" />-->
 	</ItemGroup>
 </Project>

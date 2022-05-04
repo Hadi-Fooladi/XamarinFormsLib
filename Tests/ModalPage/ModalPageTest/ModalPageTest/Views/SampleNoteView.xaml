@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<haft:ModalContentView
+	x:Class="ModalPageTest.SampleNoteView"
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:haft="clr-namespace:HaFT.Xamarin.Forms;assembly=HaFT.Xamarin.Forms.ModalPage">
+	
+	<Grid RowDefinitions="Auto,*">
+		<Grid Grid.Row="0" ColumnDefinitions="100,Auto">
+			<Entry x:Name="_entry" Grid.Column="0" />
+			<Button Grid.Column="1" Text="Add" Clicked="Add_OnClicked" />
+		</Grid>
+
+		<Label Grid.Row="1" x:Name="_lbl" />
+	</Grid>
+</haft:ModalContentView>
