@@ -15,9 +15,9 @@ public abstract class ImageButtonBase : TextualContentView
 	public static readonly BindableProperty
 		BorderThicknessProperty = BP<double>.Create(nameof(BorderThickness), 2),
 		BorderRadiusProperty = BP<double>.Create(nameof(BorderRadius), 20),
-		BorderFillProperty = BP<Brush>.Create(nameof(BorderFill), Brush.Black),
-		FillProperty = BP<Brush>.Create(nameof(Fill), Brush.Azure),
-		InactiveFillProperty = BP<Brush>.Create(nameof(InactiveFill), Brush.LightGray),
+		BorderFillProperty = BP<Brush>.Create(nameof(BorderFill), new SolidColorBrush(Color.Black)),
+		FillProperty = BP<Brush>.Create(nameof(Fill), new SolidColorBrush(Color.Azure)),
+		InactiveFillProperty = BP<Brush>.Create(nameof(InactiveFill), new SolidColorBrush(Color.LightGray)),
 		ImageProperty = BP<ImageSource>.Create(nameof(Image), null),
 		ImageWidthProperty = BP<double>.Create(nameof(ImageWidth), 32),
 		ImageHeightProperty = BP<double>.Create(nameof(ImageHeight), 32),
