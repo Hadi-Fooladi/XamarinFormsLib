@@ -4,15 +4,17 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>HaFT.Xamarin.Forms.Lib</RootNamespace>
     <AssemblyName>HaFT.Xamarin.Forms.Lib</AssemblyName>
-    <Version>2.1.6</Version>
+    <Version>3.0.7</Version>
     <Authors>Hadi Fooladi Talari</Authors>
     <Company>HaFT</Company>
     <PackageTags>Xamarin Forms Useful Library HaFT</PackageTags>
     <Product />
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

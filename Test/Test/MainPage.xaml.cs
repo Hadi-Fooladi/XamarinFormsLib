@@ -1,9 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
-using HaFT.Xamarin.Forms.Lib;
-using HaFT.Xamarin.Forms.Lib.Ext;
-
-using Button = HaFT.Xamarin.Forms.Lib.Button;
+using ImageButton = HaFT.Xamarin.Forms.Lib.Views.ImageButton;
 
 namespace Test
 {
@@ -12,30 +9,22 @@ namespace Test
 		public MainPage()
 		{
 			InitializeComponent();
-
-			var L = new HaFT.Xamarin.Forms.Lib.Label
-			{
-				Text = "OK",
-				BorderColor = Color.Coral,
-				BackgroundColor = Color.CornflowerBlue,
-				BorderWidth = 3
-			};
-			G.Children.Add(L, 0, 0);
-
-			lbl.Text = "Oh, Reallllllllllllllllllllllly Sanp!!!!!!!!!!!!!!!";
 		}
 
-		private void Button_OnClicked(Button B)
+		int counter;
+
+		void RoundedButton_OnTapped(object sender, EventArgs e)
 		{
-			DisplayAlert("", B.Text, "OK");
-			B.Text += "@";
+			var b = (ImageButton)sender;
+
+			b.Image = counter++ % 2 == 0 ? (ImageSource)"pencil.png" : null;
 		}
 
-		private async void RoundedButton_OnTapped(object sender, EventArgs e)
+		void Edit_OnTapped(object sender, EventArgs e)
 		{
-			var b = await this.ShowYesNoPrompt("Please answer");
+			var b = (ImageButton)sender;
 
-			await this.ShowMessage(b.ToString());
+			b.Image = null;
 		}
 	}
 }

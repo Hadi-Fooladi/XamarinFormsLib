@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace HaFT.Xamarin.Forms.Lib
+namespace HaFT.Xamarin.Forms.Lib.Views
 {
 	public class TextualContentView : ContentView
 	{
