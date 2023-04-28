@@ -20,7 +20,8 @@ public abstract class ImageButtonBase : TextualContentView
 		InactiveFillProperty = BP<Brush>.Create(nameof(InactiveFill), Brush.LightGray),
 		ImageProperty = BP<ImageSource>.Create(nameof(Image), null),
 		ImageWidthProperty = BP<double>.Create(nameof(ImageWidth), 32),
-		ImageHeightProperty = BP<double>.Create(nameof(ImageHeight), 32);
+		ImageHeightProperty = BP<double>.Create(nameof(ImageHeight), 32),
+		ContentPaddingProperty = BP<Thickness>.Create("", new Thickness(10,5));
 
 	public double BorderThickness
 	{
@@ -68,6 +69,12 @@ public abstract class ImageButtonBase : TextualContentView
 	{
 		get => (double)GetValue(ImageHeightProperty);
 		set => SetValue(ImageHeightProperty, value);
+	}
+
+	public Thickness ContentPadding
+	{
+		get => (Thickness)GetValue(ContentPaddingProperty);
+		set => SetValue(ContentPaddingProperty, value);
 	}
 	#endregion
 }

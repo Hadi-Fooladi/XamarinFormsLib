@@ -9,11 +9,12 @@
 		<Grid.RowDefinitions>
 			<RowDefinition />
 			<RowDefinition />
-			<RowDefinition />
+			<RowDefinition Height="Auto" />
 			<RowDefinition />
 			<RowDefinition />
 		</Grid.RowDefinitions>
 
+		<lib:ImageButton Grid.Row="2" Image="pencil.png" Text="Edit" Tapped="Edit_OnTapped" Fill="Yellow" FontSize="32" ContentPadding="0,20" />
 		<lib:ImageButton Grid.Row="3" Image="pencil.png" Text="Edit" Tapped="Edit_OnTapped" Fill="Yellow" FontSize="32" />
 		<lib:ImageButton Grid.Row="4" ImageWidth="64" ImageHeight="64" Text="Rounded Button 2" Tapped="RoundedButton_OnTapped" BorderThickness="5" BorderRadius="30" BorderFill="Magenta" />
 	</Grid>

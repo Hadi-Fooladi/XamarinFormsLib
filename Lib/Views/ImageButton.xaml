@@ -32,7 +32,7 @@
 
 		</shapes:Rectangle>
 
-		<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Margin="10,5">
+		<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Margin="{Binding ContentPadding}">
 			<Image
 				VerticalOptions="Center"
 				Source="{Binding Image}"
