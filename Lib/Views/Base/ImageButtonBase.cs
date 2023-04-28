@@ -21,7 +21,7 @@ public abstract class ImageButtonBase : TextualContentView
 		ImageProperty = BP<ImageSource>.Create(nameof(Image), null),
 		ImageWidthProperty = BP<double>.Create(nameof(ImageWidth), 32),
 		ImageHeightProperty = BP<double>.Create(nameof(ImageHeight), 32),
-		ContentPaddingProperty = BP<Thickness>.Create("", new Thickness(10,5));
+		ContentPaddingProperty = BP<Thickness>.Create(nameof(ContentPadding), new Thickness(10,5));
 
 	public double BorderThickness
 	{
