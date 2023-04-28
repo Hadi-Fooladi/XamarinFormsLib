@@ -22,9 +22,16 @@ namespace Test
 
 		void Edit_OnTapped(object sender, EventArgs e)
 		{
-			var b = (ImageButton)sender;
+			DisplayAlert("", "Y", "N");
+			//_btn.IsEnabled = !_btn.IsEnabled;
+			//var b = (ImageButton)sender;
 
-			b.Image = null;
+			//b.Image = null;
+		}
+
+		void Edit2_OnTapped(object sender, EventArgs e)
+		{
+			_btn.IsEnabled = !_btn.IsEnabled;
 		}
 	}
 }

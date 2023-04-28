@@ -9,6 +9,7 @@
 	xmlns:local="clr-namespace:HaFT.Xamarin.Forms.Lib.Views;assembly=HaFT.Xamarin.Forms.Lib">
 
 	<local:ImageButtonBase.Resources>
+		<xct:InvertedBoolConverter x:Key="InvertedBoolConverter" />
 		<xct:IsNotNullOrEmptyConverter x:Key="IsNotNullConverter" />
 	</local:ImageButtonBase.Resources>
 
@@ -18,19 +19,16 @@
 			Stroke="{Binding BorderFill}"
 			RadiusX="{Binding BorderRadius}"
 			RadiusY="{Binding BorderRadius}"
-			StrokeThickness="{Binding BorderThickness}">
-			
-			<shapes:Rectangle.Triggers>
-				<DataTrigger Binding="{Binding IsEnabled}" Value="True" TargetType="shapes:Rectangle">
-					<Setter Property="Fill" Value="{Binding Fill}" />
-				</DataTrigger>
+			StrokeThickness="{Binding BorderThickness}"
+			IsVisible="{Binding IsEnabled}" />
 
-				<DataTrigger Binding="{Binding IsEnabled}" Value="False" TargetType="shapes:Rectangle">
-					<Setter Property="Fill" Value="{Binding InactiveFill}" />
-				</DataTrigger>
-			</shapes:Rectangle.Triggers>
-
-		</shapes:Rectangle>
+		<shapes:Rectangle
+			Fill="{Binding InactiveFill}"
+			Stroke="{Binding BorderFill}"
+			RadiusX="{Binding BorderRadius}"
+			RadiusY="{Binding BorderRadius}"
+			StrokeThickness="{Binding BorderThickness}"
+			IsVisible="{Binding IsEnabled,Converter={StaticResource InvertedBoolConverter}}" />
 
 		<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Margin="{Binding ContentPadding}">
 			<Image
